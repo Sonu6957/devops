@@ -21,7 +21,7 @@ jobs:
           docker build -t devops/project-1:${{ env.SHORT_SHA }} ./project-1
       - name: Login to Dockerhub
         run: |
-          echo "${{ secrets.DOCKERHUB_TOKEN }}" | dokcer login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+          echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
       - name: Push to Dockerhub
         run: |
           docker push devopsproj/proj:${{ env.SHORT_SHA }}
