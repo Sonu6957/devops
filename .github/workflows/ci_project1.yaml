@@ -24,4 +24,4 @@ jobs:
           echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
       - name: Push to Dockerhub
         run: |
-          docker push devopsproj/proj:${{ env.SHORT_SHA }}
+          docker push devops/project-1:${{ env.SHORT_SHA }}
