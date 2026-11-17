@@ -5,7 +5,7 @@ name: Devops pipeline
 on:
   push:
     branches:
-      - workflow_dispatch
+      - master
 
 jobs:
   build_and_push:
